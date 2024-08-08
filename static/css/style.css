@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #5e9aaa; /* Softer shade for background */
+    background-color: #179BAE; /* Softer shade for background */
     color: #333; /* Improved text color */
 }
 
@@ -12,7 +12,7 @@ body {
     width: 80%;
     max-width: 800px;
     padding: 20px;
-    background-color: #c7c4c4;
+    background-color: #F1DEC6;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-top: 50px; /* Added space from the top */
@@ -26,7 +26,7 @@ form {
 
 input[type="text"] {
     flex: 1; /* Make input field take remaining space */
-    padding: 5px;
+    padding: 0px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-right: 10px; /* Space between input and button */
@@ -56,12 +56,16 @@ table {
 }
 
 table, td, th {
-    border: 1px solid #ddd;
+    border: 1px solid #f8af8b;
     border-radius: 10px;
 }
 
+td{
+   background-color: #f8af8b;
+}
+
 th {
-    background-color: #f4f4f4;
+    background-color: #FF8343;
     padding: 10px;
     text-align: left;
 }
