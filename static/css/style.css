@@ -1,37 +1,125 @@
-body{
-    margin: 100;
+/* Global Styles */
+body {
+    margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(94, 160, 175);
+    background-color: #5e9aaa; /* Softer shade for background */
+    color: #333; /* Improved text color */
 }
 
+/* Centered Content */
 .content {
     margin: 0 auto;
-    width: 400px;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #c7c4c4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px; /* Added space from the top */
 }
 
-table, td, th {
-    border: 1px solid #aaa;
+/* Form Styles */
+form {
+    display: flex; /* Flexbox to align input and button horizontally */
+    align-items: center; /* Vertically align items in the center */
 }
 
+input[type="text"] {
+    flex: 1; /* Make input field take remaining space */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px; /* Space between input and button */
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff; /* Bootstrap primary color for example */
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Table Styles */
 table {
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     width: 100%;
     margin-bottom: 20px;
 }
 
+table, td, th {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
 th {
-    height: 30px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: left;
 }
 
 td {
-    text-align: center;
-    padding: 5px;
+    padding: 8px;
 }
 
-.form {
-    margin: 1000000px;
-}
-
+/* Specific ID Styles */
 #content {
-    width: 70%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
+
+#logout {
+    position: absolute; /* Absolute positioning for top right corner */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+}
+
+/* Button Styles */
+.buttons{
+    display: flex; /* Flexbox to align input and button horizontally */
+    align-items: center; /* Vertically align items in the center */
+}   
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none; /* Remove underline for links styled as buttons */
+    margin: 5px;
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover for a subtle effect */
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Red background for delete button */
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.btn-update {
+    background-color: #007bff; /* Blue background for update button */
+}
+
+.btn-update:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+

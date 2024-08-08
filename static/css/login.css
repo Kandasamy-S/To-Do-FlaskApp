@@ -1,0 +1,65 @@
+/* Global Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #5e9aaa; /* Softer shade for background */
+    color: #333; /* Improved text color */
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading text */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff; /* Optional: Background color for the form */
+    padding: 20px; /* Padding around the form */
+    border-radius: 8px; /* Rounded corners for the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Shadow for better visibility */
+    width: 100%;
+    max-width: 400px; /* Maximum width of the form */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Full width within the form */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px; /* Space between inputs and button */
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%; /* Full width within the form */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff; /* Bootstrap primary color for example */
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+div {
+    margin-top: 20px;
+    text-align: center; /* Center the text inside the div */
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
