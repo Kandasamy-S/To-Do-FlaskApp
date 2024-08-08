@@ -7,6 +7,7 @@
 {% block body %} 
 <div class="content">
     <h1 style="text-align: center;">Tasks</h1>
+    <h2>Tasks of {{user}}</h2>
     {% if tasks|length < 1 %}
     <h4 style="text-align: center;">No tasks left</h4>
     {% else %}
