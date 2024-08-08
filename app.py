@@ -25,6 +25,7 @@ class Todo(db.Model):
     content = db.Column(db.String(200), nullable=False)
     completed = db.Column(db.Integer, default=0)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
+    username = db.Column(db.String(150), nullable=False)
 
     def __repr__(self):
         return '<Task %r>' % self.id
@@ -75,7 +76,7 @@ def logout():
 def index():
     if request.method == 'POST':
         task_content = request.form['content']
-        new_task = Todo(content=task_content)
+        new_task = Todo(content=task_content, username=current_user.username)
         try:
             db.session.add(new_task)
             db.session.commit()
@@ -83,7 +84,7 @@ def index():
         except:
             return "Oops Something went wrong!!!"
     else:
-        tasks = Todo.query.order_by(Todo.date_created).all()
+        tasks = Todo.query.filter_by(username=current_user.username).order_by(Todo.date_created).all()
         return render_template("index.html", tasks=tasks,user=current_user.username)
 
 @app.route('/delete/<int:id>')
